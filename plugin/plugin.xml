@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+
+   id="GoogleAnalyticsManagement"
+   iconfile="gam.svg"
+   description="Google Analytics Management"
+   tooltip="Fetches Data from Google Analytics Management API for Accounts, Webproperties and Profiles"
+   category="Input"
+   classname="de.vproductions.pdi.plugin.step.googleanalyticsmanagementapi.GoogleAnalyticsManagementMeta">
+		
+		<libraries>
+    		<library name="google-analytics-management-api.jar"/>
+    		<library name="lib/google-http-client-1.19.0.jar"/>
+    		<library name="lib/google-http-client-jackson2-1.19.0.jar"/>
+    		<library name="lib/google-api-client-1.19.0.jar"/>
+    		<library name="lib/google-api-services-analytics-v3-rev98-1.19.0.jar"/>
+    		<library name="lib/google-oauth-client-1.19.0.jar"/>
+    		<library name="lib/guava-jdk5-13.0.jar"/>
+    		<library name="lib/jackson-core-2.6.0.jar"/>
+		</libraries>
+		
+</plugin>
