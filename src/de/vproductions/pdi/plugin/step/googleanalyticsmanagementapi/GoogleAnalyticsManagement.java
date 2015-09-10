@@ -48,8 +48,6 @@ public class GoogleAnalyticsManagement extends BaseStep implements StepInterface
 			data.outputRowMeta = (RowMetaInterface) getInputRowMeta().clone();
 			meta.getFields(data.outputRowMeta, getStepname(), null, null, this);
 
-			logBasic("template step initialized successfully");
-
 		}
 
 		Object[] outputRow = callGoogleAnalyticsManagement(r);
@@ -118,7 +116,7 @@ public class GoogleAnalyticsManagement extends BaseStep implements StepInterface
 		      // 1: accountId
 		      // 2: webPropertyId
 		      
-		      Profiles profiles = analytics.management().profiles().list("~all", "~all").execute();
+		      Profiles profiles = analytics.management().profiles().list(environmentSubstitute( meta.getAccountId() ), environmentSubstitute( meta.getWebPropertyId() )).execute();
 		      data.profiles = profiles;
 		      
 //		      for (Profile profile : profiles.getItems()) {

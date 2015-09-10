@@ -18,7 +18,6 @@ import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.ShellAdapter;
 import org.eclipse.swt.events.ShellEvent;
 import org.eclipse.swt.graphics.Cursor;
-import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.layout.FormLayout;
@@ -31,7 +30,6 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 import org.pentaho.di.core.Const;
 import org.pentaho.di.core.exception.KettleException;
@@ -42,10 +40,8 @@ import org.pentaho.di.trans.step.BaseStepMeta;
 import org.pentaho.di.trans.step.StepDialogInterface;
 import org.pentaho.di.trans.step.StepMeta;
 import org.pentaho.di.ui.core.PropsUI;
-import org.pentaho.di.ui.core.dialog.ErrorDialog;
 import org.pentaho.di.ui.core.widget.ColumnInfo;
 import org.pentaho.di.ui.core.widget.ComboVar;
-import org.pentaho.di.ui.core.widget.TableView;
 import org.pentaho.di.ui.core.widget.TextVar;
 import org.pentaho.di.ui.trans.step.BaseStepDialog;
 
@@ -64,10 +60,6 @@ public class GoogleAnalyticsManagementDialog extends BaseStepDialog implements S
  private Label wlResult;
  private TextVar wResult;
  private FormData fdlResult, fdResult;
-
- private Label wlResultCode;
- private TextVar wResultCode;
- private FormData fdlResultCode, fdResultCode;
  
  private Label wlAccountIdInField;
  private Button wAccountIdInField;
@@ -111,12 +103,6 @@ public class GoogleAnalyticsManagementDialog extends BaseStepDialog implements S
 
  private Composite wAuthComp;
  private FormData fdAuthComp;
-
-
-
- private Label wlResponseTime;
- private TextVar wResponseTime;
- private FormData fdlResponseTime, fdResponseTime;
 
  private Label wlP12File;
  private TextVar wP12File;
